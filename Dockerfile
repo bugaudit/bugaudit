@@ -19,8 +19,6 @@ WORKDIR /bugaudit-tools
 RUN unzip dependency-check.zip
 RUN rm dependency-check.zip
 RUN ln -s /bugaudit-tools/dependency-check/bin/dependency-check.sh /bin/dependency-check
-RUN dependency-check -s /tmp/
-RUN rm dependency-check-report.html
 WORKDIR /bugaudit-workspace
 RUN mkdir /root/.ssh
 COPY docker-git-config /root/.ssh/config
@@ -29,4 +27,6 @@ ARG BUGAUDIT_CLI_URL
 ADD $BUGAUDIT_CLI_URL /bugaudit-workspace/bugaudit-runner.jar
 COPY bugaudit-runner /bugaudit-workspace/bugaudit-runner
 RUN chmod +x /bugaudit-workspace/bugaudit-runner
+RUN dependency-check -s /tmp/
+RUN rm dependency-check-report.html
 CMD ["/bugaudit-workspace/bugaudit-runner"]
