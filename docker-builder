@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 BUGAUDIT_VERSION="0.2"
-BUGAUDIT_CLI_URL="https://dl.bintray.com/bugaudit/maven/me/shib/bugaudit/bugaudit-cli/$BUGAUDIT_VERSION/:bugaudit-cli-$BUGAUDIT_VERSION.jar"
+BUGAUDIT_CLI_URL="https://dl.bintray.com/bugaudit/maven/me/shib/bugaudit/bugaudit-cli/$BUGAUDIT_VERSION/bugaudit-cli-$BUGAUDIT_VERSION.jar"
 DOCKER_USERNAME=`echo $DOCKER_USERNAME_BASE64 | base64 -d`
 DOCKER_PASSWORD=`echo $DOCKER_PASSWORD_BASE64 | base64 -d`
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
