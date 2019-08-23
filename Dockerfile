@@ -14,7 +14,7 @@ RUN gem install brakeman
 RUN gem install bundler-audit
 RUN apk add npm
 RUN npm install -g retire
-ADD https://dl.bintray.com/jeremy-long/owasp/dependency-check-5.2.0-release.zip /bugaudit-tools/dependency-check.zip
+ADD https://dl.bintray.com/jeremy-long/owasp/dependency-check-5.2.1-release.zip /bugaudit-tools/dependency-check.zip
 WORKDIR /bugaudit-tools
 RUN unzip dependency-check.zip
 RUN rm dependency-check.zip
