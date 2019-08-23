@@ -1,0 +1,77 @@
+{
+  "trackerName": "Jira",
+  "project": "TEST",
+  "issueType": "Bug",
+  "summaryUpdateAllowed": true,
+  "descriptionUpdateAllowed": true,
+  "labelUpdateAllowed": true,
+  "reprioritizeAllowed": true,
+  "deprioritizeAllowed": true,
+  "priorityMap": {
+    "Urgent": 1,
+    "High": 2,
+    "Medium": 3,
+    "Low": 4
+  },
+  "customFields": {
+    "cf_source": "BugAudit"
+  },
+  "users": {
+    "assignee": "mail@example.com",
+    "subscibers": [
+      "anothermail@example.com",
+      "test@test.com"
+    ]
+  },
+  "transitions": {
+    "Open": [
+      "In Progress",
+      "Invalid"
+    ],
+    "In Progress": [
+      "Done",
+      "Invalid"
+    ],
+    "Invalid": [
+      "Closed"
+    ],
+    "Done": [
+      "Verified",
+      "Open"
+    ],
+    "Verified": [
+      "Closed"
+    ],
+    "Closed": [
+      "Open"
+    ]
+  },
+  "openStatuses": [
+    "In Progress",
+    "Open"
+  ],
+  "resolvedStatuses": [
+    "Verified",
+    "Done"
+  ],
+  "closedStatuses": [
+    "Closed"
+  ],
+  "ignorableLabels": [
+    "bugaudit-ignore",
+    "bugaudit-skip"
+  ],
+  "ignorableStatuses": [
+    "Invalid"
+  ],
+  "toOpen": {
+    "statusTransferable": true,
+    "commentable": true,
+    "commentInterval": 30
+  },
+  "toClose": {
+    "statusTransferable": true,
+    "commentable": true,
+    "commentInterval": 15
+  }
+}
