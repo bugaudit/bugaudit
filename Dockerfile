@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.10.2
 LABEL maintainer="shibme"
 RUN mkdir bugaudit-workspace
 RUN apk update && apk upgrade
