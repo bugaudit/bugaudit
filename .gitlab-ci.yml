@@ -5,7 +5,7 @@ services:
 stages:
   - build
 
-Building Docker Image:
+Docker Build:
   stage: build
   script:
     - sh docker-builder
