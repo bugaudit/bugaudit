@@ -3,10 +3,10 @@ services:
   - docker:dind
 
 stages:
-  - build
+  - "Docker Build"
 
-Docker Build:
-  stage: build
+BugAudit Runner Build:
+  stage: "Docker Build"
   script:
     - sh docker-builder
   only:
